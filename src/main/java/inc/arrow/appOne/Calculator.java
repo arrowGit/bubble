@@ -4,25 +4,27 @@ package inc.arrow.appOne;
  * Class represents calculator
  * Created by @author Oleh Strilets on 19.02.2017.
  */
-public class Calculator {
+class Calculator {
 
     private int result;
-    public int add(int ... params){
+    int add(int... params){
+        clearResult();
         for (Integer param: params)
         this.result += param;
         return result;
     }
-    public int substract(int ... params){
+    int substract(int ... params){
+        clearResult();
         for (Integer param: params)
             this.result -= param;
         return result;
     }
 
-    public int getResult() {
+    int getResult() {
         return result;
     }
 
-    public void clearResult(int result) {
+    private void clearResult() {
         this.result = 0;
     }
 }
